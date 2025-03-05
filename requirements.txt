@@ -1,0 +1,10 @@
+Flask==2.2.5
+Werkzeug==2.2.5
+opencv-python==4.8.0.76
+numpy==1.24.3
+pillow==9.4.0
+torch==2.0.1
+torchvision==0.15.2
+tensorflow==2.12.0
+scikit-learn==1.2.2
+requests==2.31.0

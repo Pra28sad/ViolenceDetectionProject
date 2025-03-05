@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violence Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Violence Detection System</h1>
+
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <h2>Upload an Image</h2>
+            <input type="file" name="image" accept="image/*">
+            <button type="submit">Detect Violence in Image</button>
+        </form>
+
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <h2>Upload a Video</h2>
+            <input type="file" name="video" accept="video/*">
+            <button type="submit">Detect Violence in Video</button>
+        </form>
+
+        <form action="/" method="POST">
+            <h2>Enter Image URL</h2>
+            <input type="text" name="url" placeholder="Enter image URL">
+            <button type="submit">Detect Violence from URL</button>
+        </form>
+
+        <form action="/" method="POST">
+            <h2>Start Live Video Detection</h2>
+            <button type="submit" name="live">Start Live Detection</button>
+        </form>
+
+        {% if image_path %}
+            <h2>Processed Image:</h2>
+            <img src="{{ image_path }}" alt="Processed Image">
+        {% endif %}
+
+        {% if video_path %}
+            <h2>Processed Video:</h2>
+            <video controls>
+                <source src="{{ video_path }}" type="video/mp4">
+            </video>
+        {% endif %}
+    </div>
+</body>
+</html>
