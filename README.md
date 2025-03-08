@@ -98,5 +98,4 @@ This project is open-source and licensed under the [MIT License](LICENSE).
 
 📩 For any questions, feel free to reach out via GitHub issues or Telegram notifications!
 
-🔗 **Join our Telegram Channel for Updates & Support:** [Telegram Link](https://t.me/Prasad_VD_Bot)
-
+🔗 **Telegram Bot for Violence Alerts:** [Telegram Bot Link](https://t.me/Prasad_VD_Bot)
