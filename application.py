@@ -2,7 +2,8 @@ from flask import Flask, render_template, request, send_file, redirect, url_for
 import os
 from projectModel import image_pred, global_url, video_pred, live_video
 
-app = Flask(__name__)
+application = Flask(__name__)
+app = application
 
 # Configure upload folder
 UPLOAD_FOLDER = "static/uploads"
@@ -50,4 +51,6 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5009)
+    import os
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+
